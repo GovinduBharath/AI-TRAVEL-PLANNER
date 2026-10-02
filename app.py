@@ -1,14 +1,12 @@
 
-import os
 from dotenv import load_dotenv
+load_dotenv()
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from agent import run_travel_agent
-
-load_dotenv()
 
 app = FastAPI(
     title="AI Travel Planner Agent",
